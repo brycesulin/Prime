@@ -41,7 +41,7 @@ void *runner(void *param) {
     for (i = 2; i < upper; i++) {
         int trap = 0;
         /* Check each number for divisibility */
-        for (j = 2; j < i; j++) {
+        for (j = 2; j*j <= i; j++) {
             int result = i % j;
             /* If any of the numbers divide cleanly
                 then this number is not prime. So
